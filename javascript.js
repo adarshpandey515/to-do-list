@@ -5,6 +5,13 @@ function openForm() {
   function closeForm() {
     document.getElementById("myForm").style.display = "none";
   }
+  function clearall(){
+    localStorage.clear();
+    ielement.innerHTML="";
+    ghead.value="";
+    gtext.value="";
+    noTasks.innerHTML=0;
+  }
   let it=0;
 Summit.addEventListener("click", function(e){
     e.preventDefault();
@@ -13,10 +20,9 @@ Summit.addEventListener("click", function(e){
     noTasks.innerHTML=it;
     console.log(ghead.value);
     console.log(gtext.value);
-    ielement.innerHTML+=`<div class="alert alert-primary ch${it}" role="alert">
+    ielement.innerHTML+=`  <div class="alert alert-primary ch${it}" role="alert"><span class="btn  btn-danger btn-sm"> ${it}</span>
     <b id="mntext">${ghead.value}</b> <br>
-    ${gtext.value}
-<div class="at" style="display: inline;"> <button id="del"class=" btn btn-lg btn-danger "><i class="fa-solid fa-trash fa-bounce"></i></button></div>
+    <p style="margin-left:30px">${gtext.value}</p>
 </div>`;
 localStorage.setItem(ghead.value, gtext.value);
     document.getElementById("myForm").style.display = "none";
