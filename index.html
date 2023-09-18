@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do-List</title>
+    <script src="https://kit.fontawesome.com/d99781204f.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div class="container ct">
+        <div class="cct"><h1>To-Do-List</h1></div>
+        <p class="h5 bg-warning" style="border-radius: 10px; padding: 5px; ">Welcome to this To - Do List Website</p>
+        <p class="h5 bg-warning" style="border-radius: 10px; padding: 5px;">You Can Create or Delete the tasks</p>
+        <p class="h5 bg-warning" style="border-radius: 10px; padding: 5px;">Simply click the + button for creation of new tasks</p>
+        <br>
+        
+    </div>
+    <div class="container con" style="background-color: wheat;">
+        <div class="newbtn chk">
+            
+            <button id ="cform" onclick="openForm() "class=" open-button btn btn-lg  btn-info">
+                Click to create a New To-Do-List +
+            </button>
+
+        </div>
+
+        <button type="button" class="btn btn-lg btn-warning btn-primary position-relative">
+            No. of Tasks
+            <span id ="noTasks"class="position-absolute top-0 start-55 translate-middle badge rounded-pill bg-danger no_of_list">
+                0
+            </span>
+        </button>
+        
+    </div>
+    <div class="container "  style="background-color: wheat;">
+        <br>
+       
+        
+        <br>
+    </div>
+    <!-- start here inserting through js  -->
+
+    
+     <div class="container " id="ielement" style="background-color: wheat;padding-bottom: 50px;">
+       
+        <!-- <div class="alert alert-primary " role="alert">
+                <b id="mntext">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</b> <br>
+                A simple primary alert—check it out!
+           <div class="at" style="display: inline;"> <button class=" btn btn-danger "><i class="fa-solid fa-trash fa-bounce"></i></button></div>
+          </div>
+           -->
+        
+     </div>
+
+<!-- The form -->
+<div class="form-popup" id="myForm">
+  <form class="form-container">
+    <h1>Todo</h1>
+
+    <label for="email"><b>Head</b></label>
+    <input id="ghead" type="text" placeholder="Enter Heading" name="text" required>
+
+    <label for="psw"><b>Text</b></label>
+    <input id="gtext" type="text" placeholder="Enter text" name="text" required>
+
+    <button id="Summit" type="submit" class="btn">Summit</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js "></script>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
